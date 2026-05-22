@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  --color-bg-dark: #080c15;
+  --color-bg-card: #0e1626;
+  --color-border-dark: #1e293b;
+  --color-accent-indigo: #6366f1;
+  --color-accent-purple: #8b5cf6;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #080c15;
+  --foreground: #f8fafc;
+  --card-bg: #0e1626;
+  --card-border: #1e293b;
+  --accent-indigo: #6366f1;
+  --accent-purple: #8b5cf6;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Utilities for High-Converting Portfolio */
+.grid-background {
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080c15;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Blur & Glow Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 8s ease-in-out infinite;
+}
+
+/* Custom subtle borders for glassmorphism */
+.glass-border {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(14, 22, 38, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
