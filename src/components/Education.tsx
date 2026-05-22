@@ -6,15 +6,15 @@ export default function Education() {
   const educationList = [
     {
       type: "degree",
-      title: "B.S. Software Engineering (Final Year)",
+      title: "Bachelors of Science in Software Engineering",
       institution: "PMAS Arid Agriculture University",
-      location: "Islamabad / Rawalpindi, Pakistan",
-      period: "Expected Graduation: 2026",
+      location: "Islamabad, Pakistan",
+      period: "Graduated in: 2026",
       icon: <GraduationCap className="h-6 w-6 text-indigo-400" />,
       highlights: [
-        "Focused on advanced software engineering processes and methodologies.",
-        "Deep coursework: Distributed Systems, Database Management Systems, AI Applications.",
-        "Final year project and backend systems development.",
+        "Developed an AI-Powered Multi-Class Ocular Disease Screening System using EfficientNet-B3 models and Grad-CAM as a Final Year Project",
+        "Completed advanced coursework focused on Software Construction, Object Oriented Programming and Data Structures, Artificial Intelligence and Database Management System..",
+        "Integrated Gemini API into digital healthcare platforms to enhance data pipeline capabilities.",
       ],
     },
     {
@@ -26,21 +26,21 @@ export default function Education() {
       icon: <Award className="h-6 w-6 text-emerald-400" />,
       highlights: [
         "Mastered data cleaning, analysis, visualization, and SQL query optimization.",
-        "Learned R programming language and data visualization using Tableau.",
+        "Learned Python and R programming language and data visualization using Tableau.",
         "Applied analytical processes to solve complex data-driven business challenges.",
       ],
     },
     {
       type: "certificate",
-      title: "Google Career Certificate: Project Management",
+      title: "Google IT Automation with Python",
       institution: "Google (via Coursera)",
       location: "Credential Online",
       period: "Completed Professional Certificate",
       icon: <Award className="h-6 w-6 text-indigo-400" />,
       highlights: [
-        "Acquired skills in project scoping, scheduling, risk management, and resource allocation.",
-        "Trained in Agile, Scrum, and traditional project lifecycles.",
-        "Learned how to coordinate cross-functional teams and align deliverables to business goals.",
+        "Acquired in-demand skills in Python programming and IT automation to streamline system administration tasks.",
+        "Demonstrated proficiency in version control using Git and GitHub for collaborative development.",
+        "Developed the ability to write scripts for configuration management and apply automation at scale within Cloud environments.",
       ],
     },
   ];

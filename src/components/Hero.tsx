@@ -17,7 +17,7 @@ export default function Hero() {
           {/* Tagline */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/5 text-indigo-400 font-mono text-xs w-fit mb-6 animate-fade-in">
             <Sparkles className="h-3.5 w-3.5 text-indigo-400 animate-spin-slow" />
-            <span>Open to Opportunities</span>
+            <span>Open to work</span>
           </div>
 
           <p className="font-mono text-sm tracking-widest text-indigo-400 mb-2">
@@ -29,11 +29,11 @@ export default function Hero() {
           </h1>
 
           <h2 className="text-xl sm:text-2xl font-mono text-slate-300 font-medium tracking-tight mb-6">
-            Backend Software Engineer <span className="text-indigo-400">|</span> Python, Django, FastAPI
+            FullStack Developer & AI Engineer <span className="text-indigo-400">|</span> Python, Django, Restful API, FastAPI, TensorFlow
           </h2>
 
           <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl mb-8">
-            I am a Software Engineer specializing in scalable backend architectures, multi-tenant systems, and integrating AI models into production environments. Focused on building robust, performant APIs and distributed systems.
+            I am a Software Engineer specializing in backend architectures, API development, and AI integration. I build scalable, multi-tenant systems using Python, Django, and FastAPI, and I have experience deploying deep learning models into production environments. I am passionate about creating robust infrastructure and designing intelligent, data-driven solutions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

@@ -5,6 +5,48 @@ import { Cpu, Database, Share2 } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
+      title: "AI-Powered Ocular Disease Screening System",
+      stack: ["Python", "Django", "Deep Learning", "Grad-CAM"],
+      description: "Developed the backend infrastructure for a healthcare screening application. Successfully integrated deep learning diagnostic models into a production-ready Django environment, utilizing Grad-CAM heatmaps to provide explainable AI outputs for medical review.",
+      keyMetrics: [
+        { label: "AI Explainability", value: "Grad-CAM Heatmaps" },
+        { label: "Framework", value: "Django REST-Framework Tensorflow EffecientNet" },
+        { label: "Auditability", value: "Explainable Output" },
+      ],
+      features: [
+        "Grad-CAM processing engine to map diagnostic weight areas.",
+        "Model prediction pipelines integrated natively within Django tasks.",
+        "Highly-visible visual highlight zones for diagnostic review.",
+      ],
+      visual: (
+        <div className="w-full h-48 bg-slate-950/80 rounded-xl p-4 border border-white/5 overflow-hidden flex flex-col justify-between">
+          <div className="flex items-center justify-between border-b border-white/5 pb-2 text-purple-400 font-mono text-[10px] sm:text-xs">
+            <span>[Explainable AI Diagnostic]</span>
+            <Cpu className="h-4 w-4" />
+          </div>
+          {/* Eye mock visual with Grad-CAM heatmap overlay */}
+          <div className="relative flex items-center justify-center flex-grow py-2">
+            <div className="relative w-20 h-20 rounded-full border-2 border-slate-700 flex items-center justify-center bg-slate-900 overflow-hidden">
+              <div className="w-8 h-8 rounded-full border border-slate-600 bg-slate-800 flex items-center justify-center">
+                <div className="w-4 h-4 rounded-full bg-slate-950" />
+              </div>
+              {/* Heatmap highlights */}
+              <div className="absolute top-4 left-6 w-8 h-8 rounded-full bg-rose-500/40 blur-md mix-blend-screen animate-pulse" />
+              <div className="absolute bottom-6 right-5 w-6 h-6 rounded-full bg-amber-500/30 blur-sm mix-blend-screen animate-pulse" />
+            </div>
+            {/* Legend info */}
+            <div className="absolute right-0 bottom-2 bg-slate-900/90 border border-purple-500/20 rounded p-1 text-[9px] font-mono text-purple-300">
+              <div>High Severity Zone (Red)</div>
+              <div>Grad-CAM Activation Grid</div>
+            </div>
+          </div>
+          <div className="text-[10px] text-slate-500 text-right mt-1 border-t border-white/5 pt-1 font-mono">
+            Backend Latency: ~140ms | DL Inferences Served
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "Multi-Tenant SaaS Platform",
       stack: ["Python", "Django", "FastAPI", "PostgreSQL"],
       description: "Engineered a robust multi-tenant backend architecture for a SaaS platform. Designed scalable PostgreSQL schemas and implemented comprehensive organization-based workspaces with strict Role-Based Access Control (RBAC).",
@@ -42,48 +84,6 @@ export default function Projects() {
           </div>
           <div className="text-[10px] text-slate-500 text-right mt-1 border-t border-white/5 pt-1">
             {"Postgres Engine: SELECT * FROM t WHERE tenant_id = '0x9f1a'"}
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "AI-Powered Ocular Disease Screening System",
-      stack: ["Python", "Django", "Deep Learning", "Grad-CAM"],
-      description: "Developed the backend infrastructure for a healthcare screening application. Successfully integrated deep learning diagnostic models into a production-ready Django environment, utilizing Grad-CAM heatmaps to provide explainable AI outputs for medical review.",
-      keyMetrics: [
-        { label: "AI Explainability", value: "Grad-CAM Heatmaps" },
-        { label: "Framework", value: "Django API + DL" },
-        { label: "Auditability", value: "Explainable Output" },
-      ],
-      features: [
-        "Grad-CAM processing engine to map diagnostic weight areas.",
-        "Model prediction pipelines integrated natively within Django tasks.",
-        "Highly-visible visual highlight zones for diagnostic review.",
-      ],
-      visual: (
-        <div className="w-full h-48 bg-slate-950/80 rounded-xl p-4 border border-white/5 overflow-hidden flex flex-col justify-between">
-          <div className="flex items-center justify-between border-b border-white/5 pb-2 text-purple-400 font-mono text-[10px] sm:text-xs">
-            <span>[Explainable AI Diagnostic]</span>
-            <Cpu className="h-4 w-4" />
-          </div>
-          {/* Eye mock visual with Grad-CAM heatmap overlay */}
-          <div className="relative flex items-center justify-center flex-grow py-2">
-            <div className="relative w-20 h-20 rounded-full border-2 border-slate-700 flex items-center justify-center bg-slate-900 overflow-hidden">
-              <div className="w-8 h-8 rounded-full border border-slate-600 bg-slate-800 flex items-center justify-center">
-                <div className="w-4 h-4 rounded-full bg-slate-950" />
-              </div>
-              {/* Heatmap highlights */}
-              <div className="absolute top-4 left-6 w-8 h-8 rounded-full bg-rose-500/40 blur-md mix-blend-screen animate-pulse" />
-              <div className="absolute bottom-6 right-5 w-6 h-6 rounded-full bg-amber-500/30 blur-sm mix-blend-screen animate-pulse" />
-            </div>
-            {/* Legend info */}
-            <div className="absolute right-0 bottom-2 bg-slate-900/90 border border-purple-500/20 rounded p-1 text-[9px] font-mono text-purple-300">
-              <div>High Severity Zone (Red)</div>
-              <div>Grad-CAM Activation Grid</div>
-            </div>
-          </div>
-          <div className="text-[10px] text-slate-500 text-right mt-1 border-t border-white/5 pt-1 font-mono">
-            Backend Latency: ~140ms | DL Inferences Served
           </div>
         </div>
       ),

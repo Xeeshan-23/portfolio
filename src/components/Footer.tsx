@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Mail, MapPin, Copy, Check, Terminal, ExternalLink } from "lucide-react";
 
 export default function Footer() {
-  const emailAddress = "zeeshan.sadiq23@gmail.com"; // Easily configurable email
+  const emailAddress = "zeeshansadiq356@gmail.com"; // Easily configurable email
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {
